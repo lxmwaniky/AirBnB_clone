@@ -2,3 +2,6 @@
 
 import cmd
 from datetime import datetime
+
+class BaseModel:
+    pass
