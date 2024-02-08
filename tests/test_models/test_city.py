@@ -1,5 +1,4 @@
 import unittest
-from models.city import City
 
 class TestCity(unittest.TestCase):
         def test_city_inherits_from_base_model(self):
