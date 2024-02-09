@@ -9,7 +9,7 @@ class HBNBCONSOLE(cmd.Cmd):
     def do_EOF(self, line):
         return True
     def do_help(self, line):
-        print("This is the help command") 
+        return True
     def do_quit(self, line):
         return True
 
