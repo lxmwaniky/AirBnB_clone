@@ -3,7 +3,7 @@
 import cmd
 from datetime import datetime
 
-class HBNBCONSOLE(cmd.Cmd):
+class HBNBConsole(cmd.Cmd):
     prompt = '(hbnb) '
 
     def do_EOF(self, line):
@@ -12,6 +12,9 @@ class HBNBCONSOLE(cmd.Cmd):
         return True
     def do_quit(self, line):
         return True
+    def emptyline(self):
+        pass
+    
 
 if __name__ == '__main__':
     HBNBCONSOLE().cmdloop()
