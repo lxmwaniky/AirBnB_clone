@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import patch
 from models.user import User
 
+
 class TestUser(unittest.TestCase):
     """
     This class contains unit tests for the User class.
@@ -24,6 +25,7 @@ class TestUser(unittest.TestCase):
 
     def test_last_name_default_value(self):
         self.assertEqual(self.user.last_name, "")
+
 
 if __name__ == '__main__':
     unittest.main()
