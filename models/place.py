@@ -10,7 +10,8 @@ from typing import List
 
 class Place(BaseModel):
     """
-    Place class that represents a place listing in the AirBnB clone application.
+    Place class that represents a place
+    listing in the AirBnB clone application.
 
     Attributes:
         city_id (str): The ID of the city where the place is located.
@@ -22,8 +23,10 @@ class Place(BaseModel):
         max_guest (int): The maximum number of guests allowed in the place.
         price_by_night (int): The price per night for renting the place.
         latitude (float): The latitude coordinate of the place's location.
-        longitude (float): The longitude coordinate of the place's location.
-        amenity_ids (List[str]): A list of IDs of amenities available in the place.
+        longitude (float): The longitude coordinate
+        of the place's location.
+        amenity_ids (List[str]): A list of IDs of
+        amenities available in the place.
     """
     city_id: str = ""
     user_id: str = ""
