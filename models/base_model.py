@@ -7,14 +7,24 @@ import models
 
 class BaseModel:
     """BaseModel class for creating and managing instances.
+
+    Attributes:
+        TIME_FORMAT (str): The format string for time representation.
+
+    Methods:
+        __init__(*args, **kwargs): Initializes a new instance of BaseModel.
+        __str__(): Returns a string representation of the instance.
+        save(): Updates the updated_at attribute and saves the instance.
+        to_dict(): Returns a dictionary of instance attributes.
     """
     TIME_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
 
     def __init__(self, *args, **kwargs):
         """Initialize a new instance of BaseModel.
+
         Args:
-            - *args: will not be used
-            - **kwargs: a dictionary of key-values arguments
+            *args: Will not be used.
+            **kwargs: A dictionary of key-value arguments.
         """
         if kwargs:
             for key, value in kwargs.items():
