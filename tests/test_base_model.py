@@ -3,6 +3,10 @@ from datetime import datetime
 from models.base_model import BaseModel
 
 class TestBaseModel(unittest.TestCase):
+    """
+    This class contains unit tests for the BaseModel class.
+    """
+
     def setUp(self):
         self.base_model = BaseModel()
 
@@ -30,7 +34,7 @@ class TestBaseModel(unittest.TestCase):
             'created_at': self.base_model.created_at.isoformat(),
             'updated_at': self.base_model.updated_at.isoformat(),
             '__class__': 'BaseModel'
-        }
+            }
         self.assertDictEqual(self.base_model.to_dict(), expected_dict)
 
 if __name__ == '__main__':
