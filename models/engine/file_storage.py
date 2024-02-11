@@ -11,8 +11,9 @@ from os import path
 from models import *
 
 class FileStorage:
-
     """
+    This class represents a file storage system for serializing and deserializing objects to/from a JSON file.
+
     Private class attributes:
     __file_path: string - path to the JSON file
     __objects: dictionary - empty but will store all objects by <class name>.id
