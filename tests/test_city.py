@@ -1,6 +1,7 @@
 import unittest
 from models.city import City
 
+
 class TestCity(unittest.TestCase):
     """
     A test case for the City class.
@@ -17,6 +18,7 @@ class TestCity(unittest.TestCase):
 
     def test_name_default_value(self):
         self.assertEqual(self.city.name, "")
+
 
 if __name__ == '__main__':
     unittest.main()
