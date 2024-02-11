@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import patch
 from console import HBNBConsole
 
+
 class TestHBNBConsole(unittest.TestCase):
     def setUp(self):
         self.console = HBNBConsole()
@@ -27,10 +28,10 @@ class TestHBNBConsole(unittest.TestCase):
     def test_emptyline(self):
         self.assertIsNone(self.console.emptyline())
 
+
 if __name__ == '__main__':
     unittest.main()import unittest
-from unittest.mock import patch
-from console import HBNBConsole
+
 
 class TestHBNBConsole(unittest.TestCase):
     """
@@ -64,7 +65,6 @@ class TestHBNBConsole(unittest.TestCase):
     def test_do_create(self):
         with patch('builtins.input', return_value='create BaseModel'):
             self.console.do_create('')
-            # Add assertions to check if the object was created and saved correctly
 
     def test_do_show(self):
         with patch('builtins.input', return_value='show BaseModel 123'):
@@ -82,9 +82,10 @@ class TestHBNBConsole(unittest.TestCase):
             # Add assertions to check if all instances were printed
 
     def test_do_update(self):
-        with patch('builtins.input', return_value='update BaseModel 123 name "New Name"'):
+        with patch('builtins.input', return_value='update'):
             self.console.do_update('')
             # Add assertions to check if the attribute was updated correctly
+
 
 if __name__ == '__main__':
     unittest.main()
