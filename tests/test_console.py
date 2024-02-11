@@ -33,6 +33,10 @@ from unittest.mock import patch
 from console import HBNBConsole
 
 class TestHBNBConsole(unittest.TestCase):
+    """
+    Test case class for HBNBConsole.
+    """
+
     def setUp(self):
         self.console = HBNBConsole()
 
