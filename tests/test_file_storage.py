@@ -11,6 +11,7 @@ import json
 from os import path
 from models import *
 
+
 class FileStorage:
     """
     This class represents a file storage system for
@@ -32,8 +33,8 @@ class FileStorage:
         'Review': Review
     }
 
-        __file_path = "file.json"
-        __objects = {}
+    __file_path = "file.json"
+    __objects = {}
 
     def all(self):
         """Returns the dictionary __objects"""
@@ -58,8 +59,8 @@ class FileStorage:
         if path.exists(self.__file_path):
             with open(self.__file_path, 'r') as file:
                 serialized_objects = json.load(file)
-                    for key, value in serialized_objects.items():
-                        class_name, obj_id = key.split('.')
-                        cls = self.CLASSES[class_name]
-                        obj = cls(**value)
-                        self.__objects[key] = obj
+                for key, value in serialized_objects.items():
+                    class_name, obj_id = key.split('.')
+                    cls = self.CLASSES[class_name]
+                    obj = cls(**value)
+                    self.__objects[key] = obj
