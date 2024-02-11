@@ -5,6 +5,11 @@ import re
 from datetime import datetime
 
 class HBNBCommand(cmd.Cmd):
+    """
+    This class represents the command-line interface for the AirBnB clone program.
+    It provides various commands for creating, showing, updating, and deleting instances.
+    """
+
     prompt = "(hbnb) "
 
     def emptyline(self):
