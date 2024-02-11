@@ -10,9 +10,11 @@ import json
 from os import path
 from models import *
 
+
 class FileStorage:
     """
-    This class represents a file storage system for serializing and deserializing objects to/from a JSON file.
+    This class represents a file storage system for
+    serializing and deserializing objects to/from a JSON file.
 
     Private class attributes:
     __file_path: string - path to the JSON file
@@ -59,11 +61,11 @@ class FileStorage:
         if path.exists(self.__file_path):
             with open(self.__file_path, 'r', encoding="utf-8") as file:
                 serialized_objects = json.load(file)
-                    for key, obj_data in serialized_objects.items():
-                        class_name, obj_id = key.split('.')
-                        # Dynamically create an instance of
-                        # the class based on class_name
-                        obj_class = globals()[class_name]
-                        obj_instance = obj_class(**obj_data)
-                        # Store the instance in __objects
-                        self.__objects[key] = obj_instance
+                for key, obj_data in serialized_objects.items():
+                    class_name, obj_id = key.split('.')
+                    # Dynamically create an instance of
+                    # the class based on class_name
+                    obj_class = globals()[class_name]
+                    obj_instance = obj_class(**obj_data)
+                    # Store the instance in __objects
+                    self.__objects[key] = obj_instance
