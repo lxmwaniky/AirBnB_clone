@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import patch
 from models.place import Place
 
+
 class TestPlace(unittest.TestCase):
     """
     This class contains unit tests for the Place class.
@@ -25,6 +26,7 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(self.place.latitude, 0.0)
         self.assertEqual(self.place.longitude, 0.0)
         self.assertEqual(self.place.amenity_ids, [])
+
 
 if __name__ == '__main__':
     unittest.main()
