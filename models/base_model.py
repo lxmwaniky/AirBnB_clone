@@ -17,6 +17,7 @@ class BaseModel:
         save(): Updates the updated_at attribute and saves the instance.
         to_dict(): Returns a dictionary of instance attributes.
     """
+
     TIME_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
 
     def __init__(self, *args, **kwargs):
