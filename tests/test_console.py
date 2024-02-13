@@ -1,6 +1,7 @@
 import unittest
 from unittest.mock import patch
 from console import HBNBConsole
+import unittest
 
 
 class TestHBNBConsole(unittest.TestCase):
@@ -30,7 +31,7 @@ class TestHBNBConsole(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()import unittest
+    unittest.main()
 
 
 class TestHBNBConsole(unittest.TestCase):
