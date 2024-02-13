@@ -50,9 +50,9 @@ class HBNBCommand(cmd.Cmd):
 
         try:
             class_name = args[0]
-            object = self.CLASSES[class_name]()
-            object.save()
-            print(object.id)
+            obj = self.CLASSES[class_name]()
+            obj.save()
+            print(obj.id)
         except ImportError:
             print("** class doesn't exist **")
 
