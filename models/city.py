@@ -11,5 +11,6 @@ class City(BaseModel):
     """City class that inherits from BaseModel
     with Public class attributes
     """
+
     state_id: str = ""
     name: str = ""
